@@ -27,10 +27,16 @@ jobs:
       - name: Sync Capacitor
         run: npx cap sync android
 
+      - name: Prepare Gradle
+        run: |
+          cd android
+          ./gradlew --stop
+          export JAVA_TOOL_OPTIONS="-Xmx1G"
+
       - name: Build Android APK
         run: |
           cd android
-          ./gradlew assembleDebug
+          ./gradlew --no-daemon assembleDebug
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
