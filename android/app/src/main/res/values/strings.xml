@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CrypXL</string>
+    <string name="title_activity_main">CrypXL</string>
+    <string name="package_name">com.crypexl.app</string>
+    <string name="custom_url_scheme">com.crypexl.app</string>
+</resources>
